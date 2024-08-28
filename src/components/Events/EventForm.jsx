@@ -2,14 +2,14 @@ import { useState } from 'react';
 
 import ImagePicker from '../ImagePicker.jsx';
 
-export default function EventForm({ inputData, onSubmit, children }) {
+export default function EventForm ({ inputData, onSubmit, children }) {
   const [selectedImage, setSelectedImage] = useState(inputData?.image);
 
-  function handleSelectImage(image) {
+  function handleSelectImage (image) {
     setSelectedImage(image);
   }
 
-  function handleSubmit(event) {
+  function handleSubmit (event) {
     event.preventDefault();
 
     const formData = new FormData(event.target);

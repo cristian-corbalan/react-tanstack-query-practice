@@ -1,9 +1,9 @@
 import { useRef } from 'react';
 
-export default function FindEventSection() {
+export default function FindEventSection () {
   const searchElement = useRef();
 
-  function handleSubmit(event) {
+  function handleSubmit (event) {
     event.preventDefault();
   }
 

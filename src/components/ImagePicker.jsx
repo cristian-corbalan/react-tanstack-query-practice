@@ -1,4 +1,4 @@
-export default function ImagePicker({ images, selectedImage, onSelect }) {
+export default function ImagePicker ({ images, selectedImage, onSelect }) {
   return (
     <div id="image-picker">
       <p>Select an image</p>

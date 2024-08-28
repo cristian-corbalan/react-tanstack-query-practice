@@ -3,12 +3,12 @@ import { Link, useNavigate } from 'react-router-dom';
 import Modal from '../UI/Modal.jsx';
 import EventForm from './EventForm.jsx';
 
-export default function EditEvent() {
+export default function EditEvent () {
   const navigate = useNavigate();
 
-  function handleSubmit(formData) {}
+  function handleSubmit (formData) {}
 
-  function handleClose() {
+  function handleClose () {
     navigate('../');
   }
 

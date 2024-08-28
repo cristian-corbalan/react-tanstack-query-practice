@@ -1,4 +1,4 @@
-export default function ErrorBlock({ title, message }) {
+export default function ErrorBlock ({ title, message }) {
   return (
     <div className="error-block">
       <div className="error-block-icon">!</div>

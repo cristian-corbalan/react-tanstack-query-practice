@@ -4,13 +4,13 @@ import LoadingIndicator from '../UI/LoadingIndicator.jsx';
 import ErrorBlock from '../UI/ErrorBlock.jsx';
 import EventItem from './EventItem.jsx';
 
-export default function NewEventsSection() {
+export default function NewEventsSection () {
   const [data, setData] = useState();
   const [error, setError] = useState();
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    async function fetchEvents() {
+    async function fetchEvents () {
       setIsLoading(true);
       const response = await fetch('http://localhost:3000/events');
 

@@ -43,8 +43,8 @@ app.get('/events', async (req, res) => {
       title: event.title,
       image: event.image,
       date: event.date,
-      location: event.location,
-    })),
+      location: event.location
+    }))
   });
 });
 
@@ -99,7 +99,7 @@ app.post('/events', async (req, res) => {
 
   const newEvent = {
     id: Math.round(Math.random() * 10000).toString(),
-    ...event,
+    ...event
   };
 
   events.push(newEvent);
@@ -139,7 +139,7 @@ app.put('/events/:id', async (req, res) => {
 
   events[eventIndex] = {
     id,
-    ...event,
+    ...event
   };
 
   await fs.writeFile('./data/events.json', JSON.stringify(events));

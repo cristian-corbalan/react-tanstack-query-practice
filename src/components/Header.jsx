@@ -1,4 +1,4 @@
-export default function Header({ children }) {
+export default function Header ({ children }) {
   return (
     <>
       <div id="main-header-loading"></div>
