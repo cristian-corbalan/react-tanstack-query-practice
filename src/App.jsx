@@ -1,3 +1,4 @@
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import {
   Navigate,
   RouterProvider,
@@ -37,8 +38,14 @@ const router = createBrowserRouter([
   }
 ]);
 
+const client = new QueryClient();
+
 function App () {
-  return <RouterProvider router={router} />;
+  return (
+    <QueryClientProvider client={client}>
+      <RouterProvider router={router} />
+    </QueryClientProvider>
+  );
 }
 
 export default App;
