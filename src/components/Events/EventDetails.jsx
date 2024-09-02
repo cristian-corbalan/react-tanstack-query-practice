@@ -5,6 +5,7 @@ import { fetchEvent } from '../../util/http.js';
 import Header from '../Header.jsx';
 import ErrorBlock from '../UI/ErrorBlock.jsx';
 import LoadingIndicator from '../UI/LoadingIndicator.jsx';
+import DeleteEventButton from './DeleteEventButton.jsx';
 
 export default function EventDetails () {
   const { id } = useParams();
@@ -14,7 +15,6 @@ export default function EventDetails () {
     queryFn: ({ signal }) => fetchEvent({ id, signal })
   });
 
-  console.log(data);
   let content;
 
   if (isPending) {
@@ -33,7 +33,7 @@ export default function EventDetails () {
         <header>
           <h1>{data.title}</h1>
           <nav>
-            <button>Delete</button>
+            <DeleteEventButton eventId={data.id} />
             <Link to="edit">Edit</Link>
           </nav>
         </header>
