@@ -22,7 +22,7 @@ export async function fetchEvents ({ searchTerm, signal }) {
 export async function createNewEvent (eventData) {
   const response = await fetch('http://localhost:3000/events', {
     method: 'POST',
-    header: {
+    headers: {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(eventData)
