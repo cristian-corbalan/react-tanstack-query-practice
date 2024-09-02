@@ -75,6 +75,7 @@ app.get('/events/:id', async (req, res) => {
 });
 
 app.post('/events', async (req, res) => {
+  console.log(req.body);
   const { event } = req.body;
 
   if (!event) {
